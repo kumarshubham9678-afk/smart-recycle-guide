@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Smart Recycling Guide helps you learn responsible waste sorting."><meta name="theme-color" content="#205c43">
+<title>My Eco Dashboard | Smart Recycling Guide</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">♻️</span><span>Smart Recycling<br><small style="font-size:.7rem;font-weight:700;color:var(--muted)">GUIDE</small></span></a>
+<nav class="nav-links" aria-label="Main navigation"><a data-nav href="index.html">Home</a><a data-nav href="assistant.html">AI Assistant</a><a data-nav href="game.html">Waste Quest</a><a data-nav href="scanner.html">Scanner</a><a data-nav href="guide.html">Recycling Guide</a><a data-nav href="dashboard.html">Dashboard</a><a data-nav href="about.html">About</a></nav>
+<div class="nav-actions"><button class="icon-btn" data-theme-toggle aria-label="Toggle light and dark theme" title="Toggle theme">🌙</button><button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main class="container" id="dashboard-app">
+<section class="page-intro"><div class="eyebrow">Your greener journey</div><h1>My Eco Dashboard 🌱</h1><p>Your progress is saved locally in this browser. These are prototype activity statistics, not independently verified environmental impact measurements.</p></section>
+<section class="section" style="padding-top:0"><div class="grid dashboard-stats">
+<div class="dashboard-stat"><div class="emoji">♻️</div><strong id="dash-sorted">0</strong><span>Items explored / sorted</span></div>
+<div class="dashboard-stat"><div class="emoji">⭐</div><strong id="dash-points">0</strong><span>Eco-points earned</span></div>
+<div class="dashboard-stat"><div class="emoji">🏆</div><strong id="dash-best">0</strong><span>Best game score</span></div>
+<div class="dashboard-stat"><div class="emoji">🎮</div><strong id="dash-games">0</strong><span>Games completed</span></div>
+</div>
+<div class="grid split" style="margin-top:20px"><section class="card"><div class="eyebrow">Your next milestone</div><h2 style="margin-top:8px">Explore 20 items</h2><p>Every guide lookup or scanner demo identification adds activity to your prototype dashboard.</p><div class="progress-track large"><div id="dashboard-progress" class="progress-fill"></div></div><div class="game-top"><span class="small-note">Progress to 20 items</span><strong id="progress-label">0%</strong></div><div class="tip-card" style="margin-top:22px"><div class="tip-icon">🌞</div><div><h3>Daily eco challenge</h3><p>Keep one reusable bag ready for your next shopping trip.</p><label style="display:flex;gap:9px;align-items:center;margin-top:12px;font-weight:800"><input type="checkbox" id="daily-check"> I completed this challenge (+5 points)</label></div></div></section>
+<section class="card"><div class="eyebrow">Your activity</div><h2 style="margin-top:8px">Recent activity</h2><div id="recent-activity" class="activity-list"></div></section></div>
+<section class="section"><div class="section-head"><div><div class="eyebrow">Little wins add up</div><h2>Achievements</h2></div></div><div class="grid achievement-grid">
+<div class="achievement" data-achievement="first"><div class="emoji">🌱</div><h3>First Sort</h3><p class="small-note">Explore your first item.</p></div>
+<div class="achievement" data-achievement="explorer"><div class="emoji">🧭</div><h3>Eco Explorer</h3><p class="small-note">Explore five items.</p></div>
+<div class="achievement" data-achievement="first-game"><div class="emoji">🎮</div><h3>First Quest</h3><p class="small-note">Finish a Waste Quest game.</p></div>
+<div class="achievement" data-achievement="champion"><div class="emoji">🏆</div><h3>Recycling Champion</h3><p class="small-note">Earn a best score of 30 points.</p></div>
+<div class="achievement" data-achievement="quest-pro"><div class="emoji">🌍</div><h3>Quest Regular</h3><p class="small-note">Finish three games.</p></div>
+</div></section>
+<div class="card" style="border-color:#e6d9b3"><h3>Reset your progress</h3><p>This clears scores, activity and achievements stored in this browser. It does not affect any other device.</p><button class="btn ghost" id="reset-progress">Reset local progress</button></div>
+</section></main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html" style="color:#dff5a5"><span class="brand-mark">♻️</span> Smart Recycling Guide</a><p style="margin-top:14px;max-width:360px">Small everyday choices can help build cleaner communities. Learn, sort, reuse and recycle responsibly.</p></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="assistant.html">Eco-Buddy Assistant</a><a href="game.html">Waste Quest</a><a href="scanner.html">Waste Scanner</a><a href="guide.html">Recycling Guide</a></div></div>
+<div><h3>Project team</h3><div class="footer-links"><span>Raghavi Chaudhary</span><span>Shubham Dubey</span><span>Ashish Kumar</span><a href="about.html">About the project →</a></div></div>
+</div><div class="footer-bottom"><span>© <span data-year></span> Smart Recycling Guide · Educational prototype</span><span>Local recycling rules vary. Check your waste provider's guidance.</span></div></div></footer>
+</body></html>
