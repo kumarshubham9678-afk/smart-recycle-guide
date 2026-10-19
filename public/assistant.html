@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Smart Recycling Guide helps you learn responsible waste sorting."><meta name="theme-color" content="#205c43">
+<title>AI Recycling Assistant | Smart Recycling Guide</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">♻️</span><span>Smart Recycling<br><small style="font-size:.7rem;font-weight:700;color:var(--muted)">GUIDE</small></span></a>
+<nav class="nav-links" aria-label="Main navigation"><a data-nav href="index.html">Home</a><a data-nav href="assistant.html">AI Assistant</a><a data-nav href="game.html">Waste Quest</a><a data-nav href="scanner.html">Scanner</a><a data-nav href="guide.html">Recycling Guide</a><a data-nav href="dashboard.html">Dashboard</a><a data-nav href="about.html">About</a></nav>
+<div class="nav-actions"><button class="icon-btn" data-theme-toggle aria-label="Toggle light and dark theme" title="Toggle theme">🌙</button><button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main class="container">
+<section class="page-intro"><div class="eyebrow">Your friendly recycling companion</div><h1>Meet Eco-Buddy <span>🤖</span></h1><p>Ask about an item and get practical sorting, preparation and safety tips. Eco-Buddy is currently running in demo mode using a local educational knowledge base.</p></section>
+<section class="section" style="padding-top:0"><div class="card chat-shell">
+<div class="chat-top"><div class="bot-avatar">🤖</div><div style="flex:1"><h3 style="margin-bottom:4px">Eco-Buddy</h3><span class="small-note">● Ready to help · Local demo mode</span></div><button class="btn ghost" id="clear-chat">Clear chat</button></div>
+<div class="status-note" style="margin-top:15px">Demo mode: answers are based on built-in keywords, not a live AI model. A real AI service can be connected later through a secure server-side endpoint.</div>
+<div class="chat-log" id="chat-log" aria-live="polite"><div class="bubble bot">Hi, eco-hero! 🌿 I’m Eco-Buddy. Ask me where an item belongs and I’ll share typical disposal guidance. Local rules can vary.</div></div>
+<div class="small-note" style="font-weight:800;margin-bottom:8px">Try asking</div><div class="suggestions"><button class="suggestion" data-prompt="Where should I throw a banana peel?">🍌 Banana peel</button><button class="suggestion" data-prompt="Can pizza boxes be recycled?">🍕 Pizza boxes</button><button class="suggestion" data-prompt="How do I dispose of old batteries?">🔋 Old batteries</button><button class="suggestion" data-prompt="What can I do with an empty plastic bottle?">🧴 Plastic bottle</button></div>
+<form id="chat-form" class="chat-compose"><input class="input" id="chat-input" maxlength="500" autocomplete="off" placeholder="Ask Eco-Buddy a question..." aria-label="Your recycling question" required><button class="btn" type="submit">Send ↑</button></form>
+</div></section></main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html" style="color:#dff5a5"><span class="brand-mark">♻️</span> Smart Recycling Guide</a><p style="margin-top:14px;max-width:360px">Small everyday choices can help build cleaner communities. Learn, sort, reuse and recycle responsibly.</p></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="assistant.html">Eco-Buddy Assistant</a><a href="game.html">Waste Quest</a><a href="scanner.html">Waste Scanner</a><a href="guide.html">Recycling Guide</a></div></div>
+<div><h3>Project team</h3><div class="footer-links"><span>Raghavi Chaudhary</span><span>Shubham Dubey</span><span>Ashish Kumar</span><a href="about.html">About the project →</a></div></div>
+</div><div class="footer-bottom"><span>© <span data-year></span> Smart Recycling Guide · Educational prototype</span><span>Local recycling rules vary. Check your waste provider's guidance.</span></div></div></footer>
+</body></html>

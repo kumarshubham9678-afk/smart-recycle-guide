@@ -29,7 +29,8 @@ app.use(cors());
 // Parse JSON bodies (up to 10MB to support image uploads for scanning)
 app.use(express.json({ limit: "10mb" }));
 
-// Serve frontend static files from the project root
+// Serve frontend static files from public or project root
+app.use(express.static(path.join(__dirname, "..", "public")));
 app.use(express.static(path.join(__dirname, "..")));
 
 function getGeminiClient() {

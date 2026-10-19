@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Smart Recycling Guide helps you learn responsible waste sorting."><meta name="theme-color" content="#205c43">
+<title>Waste Quest Sorting Game | Smart Recycling Guide</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">♻️</span><span>Smart Recycling<br><small style="font-size:.7rem;font-weight:700;color:var(--muted)">GUIDE</small></span></a>
+<nav class="nav-links" aria-label="Main navigation"><a data-nav href="index.html">Home</a><a data-nav href="assistant.html">AI Assistant</a><a data-nav href="game.html">Waste Quest</a><a data-nav href="scanner.html">Scanner</a><a data-nav href="guide.html">Recycling Guide</a><a data-nav href="dashboard.html">Dashboard</a><a data-nav href="about.html">About</a></nav>
+<div class="nav-actions"><button class="icon-btn" data-theme-toggle aria-label="Toggle light and dark theme" title="Toggle theme">🌙</button><button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main class="container" id="game-app">
+<section class="page-intro"><div class="eyebrow">Learn through play</div><h1>Waste Quest: Sort It Right! 🎯</h1><p>Sort as many items as you can in 60 seconds. Each correct answer earns 10 points. Some tricky items need special local guidance, so read the feedback.</p></section>
+<section class="section" style="padding-top:0"><div class="game-panel">
+<div id="game-start"><div class="item-stage"><div class="item-illustration">♻️</div><h2>Ready to sort?</h2><p>Choose a difficulty and test your waste-sorting knowledge.</p></div><div class="split"><div class="form-control"><label for="difficulty">Difficulty</label><select id="difficulty" class="input"><option value="easy">Easy · 15 items</option><option value="normal" selected>Explorer · 17 items</option><option value="hard">Challenge · 19 items</option></select></div><div class="form-control"><label>Controls</label><div class="status-note">Mouse or keyboard: press 1–5 to choose a bin.</div></div></div><div class="hero-actions"><button class="btn" id="start-game">Start 60-second challenge →</button><button class="btn ghost" id="mute-toggle">🔇 Sound off</button></div></div>
+<div id="game-play" hidden><div class="game-top"><span class="eyebrow" id="question-number">ITEM 1 / 17</span><div class="game-stats"><span class="mini-stat">⭐ <span id="score-live">0</span> points</span><span class="timer" id="timer">⏱ 60s</span></div></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><div class="item-stage"><div class="item-illustration" id="item-emoji">🍌</div><h2 id="item-name">Banana peel</h2><p>Which category is the best match for this item?</p></div>
+<div class="grid bins-grid" id="bins"><button class="bin-button" data-bin="Organic"><span>🍃</span>Organic<small>Key 1</small></button><button class="bin-button" data-bin="Paper"><span>📄</span>Paper & card<small>Key 2</small></button><button class="bin-button" data-bin="Plastic & Metal"><span>🥫</span>Plastic & metal<small>Key 3</small></button><button class="bin-button" data-bin="Glass"><span>🍾</span>Glass<small>Key 4</small></button><button class="bin-button" data-bin="E-waste & Special"><span>🔋</span>E-waste / special<small>Key 5</small></button></div><div class="game-feedback" id="feedback" aria-live="polite"></div></div>
+<div id="game-finish" hidden><div class="item-stage"><div class="item-illustration">🏆</div><div class="eyebrow">Challenge complete</div><h2>Your eco score</h2><div class="grid dashboard-stats" style="margin:24px 0"><div class="dashboard-stat"><strong id="final-score">0</strong><span>Points</span></div><div class="dashboard-stat"><strong id="final-correct">0 / 0</strong><span>Correct answers</span></div><div class="dashboard-stat"><strong id="final-accuracy">0%</strong><span>Accuracy</span></div><div class="dashboard-stat"><strong>60s</strong><span>Challenge timer</span></div></div><p>Your best score and earned points are saved locally in this browser.</p><div class="hero-actions" style="justify-content:center"><button class="btn" id="replay-game">Play again ↻</button><button class="btn ghost" id="back-game">Difficulty settings</button><a class="btn secondary" href="dashboard.html">View dashboard →</a></div></div></div>
+</div><p class="small-note" style="margin-top:14px">Sorting categories are simplified for this educational game. Real collection rules vary. Some tricky items deliberately need a special service even if the closest game category is imperfect.</p></section></main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html" style="color:#dff5a5"><span class="brand-mark">♻️</span> Smart Recycling Guide</a><p style="margin-top:14px;max-width:360px">Small everyday choices can help build cleaner communities. Learn, sort, reuse and recycle responsibly.</p></div>
+<div><h3>Explore</h3><div class="footer-links"><a href="assistant.html">Eco-Buddy Assistant</a><a href="game.html">Waste Quest</a><a href="scanner.html">Waste Scanner</a><a href="guide.html">Recycling Guide</a></div></div>
+<div><h3>Project team</h3><div class="footer-links"><span>Raghavi Chaudhary</span><span>Shubham Dubey</span><span>Ashish Kumar</span><a href="about.html">About the project →</a></div></div>
+</div><div class="footer-bottom"><span>© <span data-year></span> Smart Recycling Guide · Educational prototype</span><span>Local recycling rules vary. Check your waste provider's guidance.</span></div></div></footer>
+</body></html>
