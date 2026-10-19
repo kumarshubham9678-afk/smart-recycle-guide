@@ -189,10 +189,15 @@ app.post("/api/scan", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`\n======================================================`);
-  console.log(`  Smart Recycling Guide Backend`);
-  console.log(`  Running on: http://localhost:${PORT}`);
-  console.log(`  Health check: http://localhost:${PORT}/api/health`);
-  console.log(`======================================================\n`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n======================================================`);
+    console.log(`  Smart Recycling Guide Backend`);
+    console.log(`  Running on: http://localhost:${PORT}`);
+    console.log(`  Health check: http://localhost:${PORT}/api/health`);
+    console.log(`======================================================\n`);
+  });
+}
+
+export default app;
+

@@ -22,7 +22,8 @@
   function initTheme(){let theme=localStorage.getItem('srg-theme')||'light';document.documentElement.dataset.theme=theme;let b=$('[data-theme-toggle]');if(b)b.textContent=theme==='dark'?'☀️':'🌙';}
   function toggleTheme(){let next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('srg-theme',next);let b=$('[data-theme-toggle]');if(b)b.textContent=next==='dark'?'☀️':'🌙'}
   function initNav(){const current=location.pathname.split('/').pop()||'index.html';$$('[data-nav]').forEach(a=>{if(a.getAttribute('href')===current){a.classList.add('active');a.setAttribute('aria-current','page')}});const toggle=$('.menu-toggle'),links=$('.nav-links');if(toggle&&links)toggle.addEventListener('click',()=>{let open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});const theme=$('[data-theme-toggle]');if(theme)theme.addEventListener('click',toggleTheme);const tip=$('[data-daily-tip]');if(tip){const day=Math.floor(Date.now()/86400000);tip.textContent=tips[day%tips.length]}const year=$('[data-year]');if(year)year.textContent=new Date().getFullYear();}
-  const API_BASE = (typeof location !== 'undefined' && location.port === '3000') ? '' : 'http://localhost:3000';
+  const isLocalDevPort = typeof location !== 'undefined' && (location.port === '5500' || location.port === '5501' || location.protocol === 'file:');
+  const API_BASE = isLocalDevPort ? 'http://localhost:3000' : '';
   async function checkApiHealth() {
     try {
       const res = await fetch(`${API_BASE}/api/health`);
